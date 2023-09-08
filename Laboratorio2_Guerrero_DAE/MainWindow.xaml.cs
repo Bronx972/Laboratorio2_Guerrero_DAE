@@ -24,5 +24,32 @@ namespace Laboratorio2_Guerrero_DAE
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            string usuario = Username.Text;
+            string contraseña = Contraseña.Password;
+
+            if (usuario == "Ricardo" && contraseña == "123456")
+            {
+                Window1 window = new Window1();
+                this.Close();
+                window.Show();
+            }
+            else
+            {
+                // Inicio de sesión fallido, muestra un mensaje de error.
+                MessageBox.Show("Inicio de sesión fallido. Verifica tus credenciales.");
+            }
+
+
+            
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

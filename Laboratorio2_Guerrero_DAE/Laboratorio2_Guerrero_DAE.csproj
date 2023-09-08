@@ -7,4 +7,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="contra.png" />
+    <None Remove="logo.png" />
+    <None Remove="user.png" />
+    <None Remove="user2.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="contra.png" />
+    <Resource Include="logo.png" />
+    <Resource Include="user.png" />
+    <Resource Include="user2.jpg" />
+  </ItemGroup>
+
 </Project>

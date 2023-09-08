@@ -1,0 +1,141 @@
+﻿<Window x:Class="Laboratorio2_Guerrero_DAE.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laboratorio2_Guerrero_DAE"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Menu>
+            <MenuItem Header="Archivo">
+            </MenuItem>
+            <MenuItem Header="Inicio">
+            </MenuItem>
+            <MenuItem Header="Operaciones">
+                <MenuItem Header="Ingresos" />
+                <MenuItem Header="Salidas" Click="Button_Operacion" />
+            </MenuItem>
+
+            <MenuItem Header="Mantenimiento">
+                <MenuItem Header="Conductores" Click="Button_Conductor" />
+                <MenuItem Header="Transportistas" />
+                <MenuItem Header="Camiones" Click="Button_Camion"/>
+                <MenuItem Header="Productos" />
+            </MenuItem>
+
+            <MenuItem Header="Reporte">
+                <MenuItem Header="Cargas" />
+                <MenuItem Header="Ingresos" />
+                <MenuItem Header="Salidas" Click="Button_Reporte" />
+            </MenuItem>
+        </Menu>
+
+
+        <Button x:Name="btnOperaciones"                          
+                            BorderThickness="0"
+                            Content="Operaciones"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"                           
+                            Margin="24,113,594,239"
+                            >
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#462AD8"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#28AEED"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="150" Height="40"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnMantenimientos"                          
+                            BorderThickness="0"
+                            Content="Mantenimiento"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"                           
+                            Margin="27,171,591,178"
+                           >
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#462AD8"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#28AEED"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="150" Height="40"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="btnReportes"                          
+                            BorderThickness="0"
+                            Content="Reporte"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"                           
+                            Margin="25,232,595,114"
+                           >
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#462AD8"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#28AEED"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="150" Height="40"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <GridSplitter HorizontalAlignment="Left" Height="414" Margin="204,0,0,0" VerticalAlignment="Center" Width="5"/>
+        <Image HorizontalAlignment="Left" Height="84" Margin="66,29,0,0" VerticalAlignment="Top" Width="90" Source="/user2.jpg"/>
+
+
+
+    </Grid>
+
+
+
+
+</Window>

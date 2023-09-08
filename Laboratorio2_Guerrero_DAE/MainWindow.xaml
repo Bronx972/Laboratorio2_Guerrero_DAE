@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laboratorio2_Guerrero_DAE"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1000">
     <Grid>
+        <Button x:Name="btnLogin"                          
+                            BorderThickness="0"
+                            Content="LOG IN"
+                            Foreground="White"
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"                           
+                            Margin="348,368,302,134"
+                            Click="Button_Click">
 
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#462AD8"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#28AEED"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Width="150" Height="40"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <TextBox  x:Name="Username"  HorizontalAlignment="Left" Margin="462,312,0,0" TextWrapping="Wrap"  Text="Username"  VerticalAlignment="Top" Width="120"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="472,144,0,0" VerticalAlignment="Top" Width="100" Source="/logo.png"/>
+        <Label Content="Bienvenido al programa de gestión de &#xD;&#xA;                       Peru Grass" HorizontalAlignment="Left" Margin="412,260,0,0" VerticalAlignment="Top" Width="220" Height="46"/>
+        <Image HorizontalAlignment="Left" Height="14" Margin="436,312,0,0" VerticalAlignment="Top" Width="16" Source="/user.png" RenderTransformOrigin="5.107,-5.115"/>
+        <Image HorizontalAlignment="Left" Height="16" Margin="436,346,0,0" VerticalAlignment="Top" Width="16" Source="/contra.png"/>
+        <PasswordBox x:Name="Contraseña" HorizontalAlignment="Left" Margin="462,350,0,0" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
